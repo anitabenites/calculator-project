@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+}
+
+h1 {
+    font-size: 45px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn {
+    /* background-color: gray;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; */
+    /* background: white; */
+    width: 8.5em;
+    height: 4.5em;
+    border: solid 0.5px black;
+}
+.btnZero {
+  width: 17em;
+  height: 4.5em;
+  border: solid 0.5px black;
+}
+.display-screen {
+  height: 100px;
+  width: 370px;
+  border: 2px solid black;
+}
+
+/*
+#connect4 {
+    background-color: #ECA3FF;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.column {
+    width: 80px;
+    display: table-cell;
+}
+
+.slot {
+    margin: 10px;
+    height: 60px;
+    background-color: white;
+    border-radius: 20%;
+    margin: 5px;
+} */
