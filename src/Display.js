@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import Button from './Button';
 
 class Display extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
 
   render() {
     return (
-      <div className="display-screen">
-      </div>
+      <input className="display-screen" type="text" value = {this.props.result}/>
     );
   }
 }

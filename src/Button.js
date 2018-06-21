@@ -3,33 +3,20 @@ import ReactDOM from 'react-dom';
 
 // using ES6 class:
 class Button extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+    this.state = {result:"0"}
     this.clickFunction = this.clickFunction.bind(this);
   }
-  clickFunction(event) {
+  clickFunction() {
       console.log("you clicked me, thank you!");
+      this.props.clickFunction(this.props.text);
   }
   render() {
     return (
       <div>
         <div>
-          <button className="btn" type="button" onClick={this.clickFunction}>7</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>8</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>9</button>
-        </div>
-        <div>
-          <button className="btn" type="button" onClick={this.clickFunction}>4</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>5</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>6</button>
-        </div>
-        <div>
-          <button className="btn" type="button" onClick={this.clickFunction}>1</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>2</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>3</button>
-        </div>
-        <div>
-          <button className="btnZero" type="button" onClick={this.clickFunction}>0</button>
+          <button className="btn" type="button" onClick={this.clickFunction}>{this.props.text}</button>
         </div>
       </div>
     );
