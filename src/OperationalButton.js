@@ -15,10 +15,10 @@ class OperationalButton extends React.Component {
     return (
       <div>
         <div>
-          <button className="btn" type="button" onClick={this.clickFunction}>C</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>+</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>%</button>
-          <button className="btn" type="button" onClick={this.clickFunction}>÷</button>
+          <button className="btn" type="button" onClick={this.props.triggerDisplayUpdate}>+</button>
+          <button className="btn" type="button" onClick={this.props.triggerDisplayUpdate}>-</button>
+          <button className="btn" type="button" onClick={this.props.triggerDisplayUpdate}>*</button>
+          <button className="btn" type="button" onClick={this.props.triggerDisplayUpdate}>/</button>
         </div>
       </div>
     );

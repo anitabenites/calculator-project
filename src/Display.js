@@ -3,14 +3,39 @@ import ReactDOM from 'react-dom';
 import Button from './Button';
 
 class Display extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
-    return (
-      <input className="display-screen" type="text" value = {this.props.result}/>
-    );
+    if(this.props.inputs){
+      if((this.props.inputs.operand1 && !this.props.inputs.operand2) || (this.props.inputs.operand1 && this.props.operator && !this.props.inputs.operand2)) {
+        return(
+          <div className="display-screen">
+            {this.props.inputs.operand1}
+          </div>
+        )
+      }
+      else if(this.props.inputs.operand1 && this.props.inputs.operator && this.props.inputs.operand2){
+        return(
+          <div className="display-screen">
+            {this.props.inputs.operand2}
+          </div>
+        )
+      }
+      else{
+        return(
+          <div className="display-screen">
+          </div>
+        )
+      }
+    }
+    else{
+      return(
+        <div className="display-screen">
+        </div>
+      )
+    }
   }
 }
 

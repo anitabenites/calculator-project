@@ -10,48 +10,45 @@ h1 {
 }
 
 .btn {
-    /* background-color: gray;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px; */
-    /* background: white; */
     width: 8.5em;
     height: 4.5em;
-    border: solid 0.5px black;
+    background-color: #E0E0E0;
 }
 .btnZero {
   width: 17em;
   height: 4.5em;
-  border: solid 0.5px black;
+  background-color: #E0E0E0;
+}
+.btnOperational{
+  width: 8.5em;
+  height: 4.5em;
+  background-color: #EA9551;
+  color:white;
 }
 .display-screen {
-  height: 100px;
-  width: 370px;
-  border: 2px solid black;
+  height: 130px;
+  width: 373px;
+  background-color: #9E8164;
+  color: white;
+  font-size: 60px;
 }
-
-/*
-#connect4 {
-    background-color: #ECA3FF;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+.division {
+  color: white;
+  font-weight: 600;
 }
-
-.column {
-    width: 80px;
-    display: table-cell;
+.multiplication {
+  color: white;
+  font-weight: 600;
 }
-
-.slot {
-    margin: 10px;
-    height: 60px;
-    background-color: white;
-    border-radius: 20%;
-    margin: 5px;
-} */
+.minus {
+  color: white;
+  font-weight: 600;
+}
+.plus {
+  color: white;
+  font-weight: 600;
+}
+.equal {
+  color: white;
+  font-weight: 600;
+}
