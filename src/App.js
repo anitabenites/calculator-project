@@ -48,14 +48,14 @@ export default class App extends React.Component {
     if(this.state.operand1 && this.state.operand2 && this.state.operator){
       if(this.state.operator == "+"){
         this.setState({
-          operand1: this.state.operand1 + this.state.operand2,
+          operand1: this.state.operand1 + this.state.operand2 || "0",
           operator: null,
           operand2: null
         }, function(){console.log(this.state)})
       }
       else if(this.state.operator=="-"){
         this.setState({
-          operand1: this.state.operand1 - this.state.operand2,
+          operand1: this.state.operand1 - this.state.operand2 || "0",
           operator: null,
           operand2: null
         }, function(){console.log(this.state)})
@@ -76,7 +76,7 @@ export default class App extends React.Component {
       }
       else if(this.state.operator=="%"){
         this.setState({
-          operand1: this.state.operand1%this.state.operand2,
+          operand1: this.state.operand1%this.state.operand2 || "0",
           operator: null,
           operand2: null
         }, function(){console.log(this.state)})
