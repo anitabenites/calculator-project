@@ -12,14 +12,14 @@ class Display extends React.Component {
       if((this.props.inputs.operand1 && !this.props.inputs.operand2) || (this.props.inputs.operand1 && this.props.operator && !this.props.inputs.operand2)) {
         return(
           <div className="display-screen">
-            {this.props.inputs.operand1}
+            <div className="display-result">{this.props.inputs.operand1}</div>
           </div>
         )
       }
       else if(this.props.inputs.operand1 && this.props.inputs.operator && this.props.inputs.operand2){
         return(
           <div className="display-screen">
-            {this.props.inputs.operand2}
+            <div className="display-result">{this.props.inputs.operand2}</div>
           </div>
         )
       }
