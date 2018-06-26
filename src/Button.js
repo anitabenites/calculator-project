@@ -10,6 +10,7 @@ class Button extends React.Component {
       console.log("you clicked me, thank you!");
   }
   render() {
+    // TODO: use a different onclick handler for operation and number buttons
     return (
       <div>
         <div>

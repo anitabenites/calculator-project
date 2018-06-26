@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Button from './Button';
 
 class Display extends React.Component {
@@ -8,7 +7,6 @@ class Display extends React.Component {
   }
 
   render() {
-    if(this.props.inputs){
       if((this.props.inputs.operand1 && !this.props.inputs.operand2) || (this.props.inputs.operand1 && this.props.operator && !this.props.inputs.operand2)) {
         return(
           <div className="display-screen">
@@ -26,16 +24,10 @@ class Display extends React.Component {
       else{
         return(
           <div className="display-screen">
+            <div className="display-result">0</div>
           </div>
         )
       }
-    }
-    else{
-      return(
-        <div className="display-screen">
-        </div>
-      )
-    }
   }
 }
 

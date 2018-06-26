@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from './Button';
 import Display from './Display';
-import OperationalButton from './OperationalButton';
+// import OperationalButton from './OperationalButton';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -15,6 +15,8 @@ export default class App extends React.Component {
   }
 
   updateDisplay(event) {
+    // TODO: split this function into smaller parts, for example extract functionalities into separate functions
+
     var inputNumber = event.target.innerHTML; // whatever I click in the calculator will be saved in inputNumber
     //event.target.innerHTML gives me a string.
     //fetching = get something
@@ -28,6 +30,8 @@ export default class App extends React.Component {
       else if(this.state.operand1 && !this.state.operator) {
         console.log(this.state.operand1);
         console.log(inputNumber);
+        // TODO calculate new state and then call setState() once in the end
+        // TODO use local variables to store intermediate values
         this.setState({operand1: parseInt(this.state.operand1*10+parseInt(event.target.innerHTML))}, function(){console.log(this.state)})
       }
       else if(this.state.operand1 && this.state.operator && !this.state.operand2) {
@@ -45,17 +49,19 @@ export default class App extends React.Component {
     }, function() {console.log(this.state)})
   }
   else if(inputNumber=='=') {
+    // TODO extract this into a new function
     if(this.state.operand1 && this.state.operand2 && this.state.operator){
       if(this.state.operator == "+"){
+        // set state once after the conditions
         this.setState({
-          operand1: this.state.operand1 + this.state.operand2 || "0",
+          operand1: this.state.operand1 + this.state.operand2,
           operator: null,
           operand2: null
         }, function(){console.log(this.state)})
       }
       else if(this.state.operator=="-"){
         this.setState({
-          operand1: this.state.operand1 - this.state.operand2 || "0",
+          operand1: this.state.operand1 - this.state.operand2,
           operator: null,
           operand2: null
         }, function(){console.log(this.state)})
@@ -76,7 +82,7 @@ export default class App extends React.Component {
       }
       else if(this.state.operator=="%"){
         this.setState({
-          operand1: this.state.operand1%this.state.operand2 || "0",
+          operand1: this.state.operand1%this.state.operand2,
           operator: null,
           operand2: null
         }, function(){console.log(this.state)})
@@ -98,6 +104,8 @@ export default class App extends React.Component {
 }
 
   render(){
+    // TODO: Introduce ButtonPanel component to store Button components
+    // TODO: Button component should display one button HTML element
     return(
       <div className="App">
         <Display inputs={this.state}/>
